@@ -40,9 +40,13 @@ The next window will contain text fields for the project `Name`, `Package name`,
     Ideally, choose a minimum version that targets the most devices, while allowing them to access all the app features. `ScribbleNotes` with a minimum level of `API 27` allows all devices >= `API 27` to access all the features of the app.
 
     Android studio provides a helpful information message to understand the selected version's possible reach:
-    
+
+    <img src="https://github.com/VeryRandomCreator/Computer-Science-Club-2023-2024/blob/main/images/1-MinimumSDKDialog.PNG">
 
     Ex: `Minimum SDK:` `API 27 ("Oreo"; Android 8.1)`
 
-11. 
-12. 
+11. <h4>Build configuration language</h4>
+
+    The language of the build config file. (`Kotlin DSL (build.gradle.kts)` or `Groovy DSL (build.gradle)`)
+
+    The `build.gradle` or `build.gradle.kts` file contains the app's config information including `applicationId`, `minSdk`, `targetSdk`, and more, which can be edited in `File -> Project Structure -> Modules -> Default Config`. The file is also where you edit and import dependencies.
