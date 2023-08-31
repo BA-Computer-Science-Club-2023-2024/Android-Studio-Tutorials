@@ -50,3 +50,5 @@ The next window will contain text fields for the project `Name`, `Package name`,
     The language of the build config file. (`Kotlin DSL (build.gradle.kts)` or `Groovy DSL (build.gradle)`)
 
     The `build.gradle` or `build.gradle.kts` file contains the app's config information including `applicationId`, `minSdk`, `targetSdk`, and more, which can be edited in `File -> Project Structure -> Modules -> Default Config`. The file is also where you edit and import dependencies.
+
+Finally, click `Finish`, and let the project automatically finish the setup process.
