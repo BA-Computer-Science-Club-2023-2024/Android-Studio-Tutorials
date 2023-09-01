@@ -37,7 +37,7 @@ The next window will contain text fields for the project `Name`, `Package name`,
 
     *Then why wouldn't you set the minimum to the lowest level to get access to all deprecated methods?* Setting the minimum to the lowest available level may lead to problems in which devices run on a API level lower than the level required to call a method, making certian features unavailable to certain devices.
 
-    Ideally, choose a minimum version that targets the most devices, while allowing them to access all the app features. `ScribbleNotes` has a minimum level of `API 27` allows all devices >= `API 27` to access all the features of the app.
+    Ideally, choose a minimum version that targets the most devices, while allowing them to access all the app features.
 
     Android studio provides a helpful information message to understand the selected version's possible reach:
 
