@@ -1,4 +1,4 @@
-# 4 - Vibration and Toasts
+# 3 - Vibration and Toasts
 
 ## Vibration
 
