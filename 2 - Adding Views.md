@@ -1,6 +1,9 @@
-# 2 - Adding views
+# 2 - Adding Views
 
-_What is a view?_ Views are interfaces for other views or the user to interact with. Buttons, text fields, lists, and many more are types of views.
+## What is a view?
+Views are interfaces for other views or the user to interact with. Buttons, text fields, lists, and many more are types of views.
+
+## The XML editor
 
 To add a view, open the `.xml` layout file, of the layout you are trying to add a view to. Next, find the chosen view to add in the `Palette` of the `Design` tab in the xml layout editor, and drag it onto the layout:
 
@@ -13,15 +16,15 @@ Next, adjust the view's constraints by pulling the nodes on the edges of the vie
 The view's position can be adjusted in-code using position-related tags:
 
 ```xml
-    <Space
-        android:id="@+id/space"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<Space
+    android:id="@+id/space"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.05"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 ```
 
 This is a snippet from the [ScribbleNotes](https://github.com/BA-Computer-Science-Club-2023-2024/ScribbleNotes) example project, specifically an invisible [space](https://github.com/BA-Computer-Science-Club-2023-2024/ScribbleNotes/blob/c4f1993f89465822ca455947494080bead5cfcf0/app/src/main/res/layout/note_list_item.xml#L22-L30) view used to align the TextView of the list items. 
@@ -39,3 +42,25 @@ To get a good idea of the different types of tags, explore the `Attributes` tab 
 <img src="https://github.com/VeryRandomCreator/Computer-Science-Club-2023-2024/blob/main/images/2-AttributesTab.PNG" height=500>
 
 The best way to learn the wide varity of tags and how to use the design editor is through trial and error. There are a vast number of tags, and parameters for the tags, making it almost impossible for someone to sit down and teach, therefore learn by creating dozens of layouts and apps yourself to pick up proper techniques and knowledge.
+
+## Linking views in XML layout to code (Adding functionality)
+
+To add functionality to the views you need a reference to the views in the layout. `findViewById(int id)` in the desired activity, (_or any view, if you are more advanced_) such as `MainActivity`.
+
+```java
+FloatingActionButton createNoteBtn = findViewById(R.id.createNoteBtn); // Initializes a reference to the create note FloatingActionButton
+```
+_A modified code snippet from ScribbleNote's [MainActivity.java](https://github.com/BA-Computer-Science-Club-2023-2024/ScribbleNotes/blob/c4f1993f89465822ca455947494080bead5cfcf0/app/src/main/java/com/veryrandomcreator/scribblenotes/MainActivity.java#L63)_
+
+In this example a reference to the list of notes in the layout is made to link the local variable `createNoteBtn` to the view in the layout with the id `R.id.createNoteBtn`
+
+The button reference can be used to set a click listener (essentially a callback) to handle click events:
+
+```java
+createNoteBtn.setOnClickListener(new View.OnClickListener() { // Handles the create note button click event
+    @Override
+    public void onClick(View v) {
+        // Code to run when clicked
+    }
+});
+```
