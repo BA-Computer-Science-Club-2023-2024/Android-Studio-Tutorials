@@ -14,7 +14,7 @@ Replace `MILLISECONDS` and `AMPLITUDE` with the amount of time in milliseconds t
 
 The following is an example of a method which vibrates the device:
 
-``` java
+```java
 /**
  * A method to vibrate the device
 */
@@ -28,14 +28,14 @@ public void vibrate() {
 
 Toasts are small popup bubbles that appear at the bottom of the screen to notify the user of something. 
 
-ADD IMAGE OF A TOAST
+<img src="https://github.com/VeryRandomCreator/Computer-Science-Club-2023-2024/blob/main/images/3-Toast.png" width=300>
 
 To create a toast, call `Toast.makeText(CONTEXT, TEXT, DURATION)`.
 
 Replace `CONTEXT` with the context of the current application or service, usually only using the `this` keyword. Replace `TEXT` with a string of the text to display in the toast. Replace `DURATION` with either `Toast.LENGTH_LONG` or `Toast.LENGTH_SHORT`.
 
 The following is an example of a method to create a toast with the specified text:
-``` java
+```java
 /**
 * A method to send a toast
 *
@@ -45,5 +45,3 @@ public void sendToast(String text) {
   Toast.makeText(this, text, Toast.LENGTH_LONG).show(); // Creates a toast with the specified text
 }
 ```
-
-ADD IMAGE OF RESULT
