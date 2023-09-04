@@ -1,4 +1,4 @@
-# 6a - Services and Notifications
+# 6a - Services and Notifications - Permissions
 
 A service is a method of running non-blocking code in the background, even when the app is closed. 
 There are multiple different types of services, however this tutorial series and the ScribbleNotes example app will only be using foreground services. More information on services in general, and the other types of services can be found [here](https://developer.android.com/guide/components/services).
