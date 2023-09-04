@@ -96,4 +96,4 @@ As depicted in the example, a field is declared to store the `ActivityResultLaun
 
 Finally, the launcher can be launched using `requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)`, in the case of the notifications permission in the ScribbleNotes code snippet.
 
-Visit 6b - Services and Notifications.md for part 2 of running a foreground service.
+Visit 6b - [Services and Notifications.md](../main/6b%20-%20Services%20and%20Notifications.md) for part 2 of running a foreground service.
