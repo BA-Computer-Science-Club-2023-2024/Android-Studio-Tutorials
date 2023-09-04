@@ -1,4 +1,4 @@
-# 6b - Services and Notifications
+# 6b - Services and Notifications - Building Service
 
 Once all the necessary permissions are managed, you can begin creating the foreground service. 
 
